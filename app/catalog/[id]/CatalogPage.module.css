@@ -1,0 +1,535 @@
+.productmain {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 5% 0;
+    padding: 10px 0;
+    gap: 100px;
+    background-color: rgba(166, 255, 125, 0);
+    width: auto;
+    font-family: 'rubik';
+}
+
+.imageContainer {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%;
+}
+
+.productmain_left {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.productmain_right {
+    display: flex;
+    position: relative;
+    justify-content: start;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 3%;
+
+}
+
+.title {
+    color: #FFFFFF;
+    font-family: "Russo One";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+.img {
+    margin-bottom: 15px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.imgR {
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Тень с смещением и размытие */
+    cursor: pointer;
+}
+
+.maintext {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.currentPrice {
+    text-align: center;
+}
+
+.buttonContainer {
+  display: flex; /* Располагаем ссылки в одну строку */
+  gap: 10px; /* Отступ между ссылками */
+  margin-top: 10px;
+}
+
+.btnM {
+  padding: 10px 10px;
+  margin: 5px;
+  border: none;
+    border-radius: 10px;
+    background: #6B6563;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 16px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  text-align: center;
+    font-family: "Russo One";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.btnM:hover {
+    background: #6D3B2D;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Russo One';
+}
+
+.btnM.active {
+    background: #532D23;
+  color: #ffffff;
+  text-decoration: none;
+    font-family: 'Russo One';
+}
+
+.btnsCont {
+    display: flex;               /* Используем Flexbox */
+    flex-direction: column;      /* Располагаем кнопки вертикально */
+    width: 100%;
+}
+
+.btnback {
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+    border-radius: 15px;
+    background: #8D402C;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    text-align: center;
+    transition: 0.2s;
+  }
+  
+  .btnback:hover {
+    background-color: #6D3B2D;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    
+  }
+  .columnscreen {
+    display: block;
+    flex-direction: column;
+    display: flex;
+    background-color: rgba(0, 255, 255, 0);
+  }
+
+  .columnscreenmobile {
+    display: none; /* Скрываем на ПК */
+  }
+
+  .productmainR {
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    margin: 0 0px;
+    padding: 10px 0;
+    gap: 30px;
+    background-color: rgba(127, 255, 212, 0);
+}
+
+.all {
+    width: auto;
+}
+
+.fixedContainerM {
+    color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  justify-content: space-around;
+  padding: 10px;
+    font-family: "Russo One";
+  margin-bottom: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(5px);
+}
+
+.fixedContainer {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+  width: 390px; /* Растягивается по ширине */
+  display: flex; /* Для кнопок */
+  justify-content: space-around; /* Разделение кнопок */
+  padding: 10px; /* Внутренний отступ */
+    gap: 10px;
+  margin-bottom: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(5px);
+}
+
+.button {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    /* width: 56px; */
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+    background: #8D402C;
+}
+
+.button:hover {
+    background: #6D3B2D;
+    text-decoration: none;
+    color: #ddd;
+}
+
+
+
+.image {
+    margin: auto 5%;
+}
+
+.text {
+  font-size: 14px; /* Размер шрифта текста (при необходимости) */
+  text-align: center; /* Центрируем текст */
+  font-family: 'rubik';
+  color: #fff;
+}
+
+
+.autoButton {
+  width: 230px;
+  color: white; /* Цвет текста на кнопке */
+  border: none; /* Убираем рамку */
+  cursor: pointer; /* Указатель при наведении */
+  padding: 0 10px;
+    transition: background-color 0.2s;
+  font-family: "rubik";
+  font-size: 19px;
+    border-radius: 10px;
+    background: #8D402C;
+}
+
+.autoButton:hover {
+    background: #6D3B2D;
+  text-decoration: none;
+  color: #ddd;
+}
+
+.columnprice {
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.imgContainer {
+  width: 688px; /* Ширина квадрата */
+  height: 688px; /* Высота квадрата */
+  overflow: hidden; /* Обрезание содержимого */
+  position: relative; /* Для позиционирования изображения */
+}
+
+.imgR {
+  width: 100%; /* Занять всю ширину контейнера */
+  height: auto; /* Автоматическая высота для сохранения пропорций */
+  position: absolute; /* Позиционирование для обрезки */
+  top: 50%; /* Центрирование по вертикали */
+  left: 50%; /* Центрирование по горизонтали */
+  transform: translate(-50%, -50%); /* Центрирование изображения */
+  object-fit: cover; /* Обрезка изображения для заполнения контейнера */
+}
+
+.productDescTitle{
+    color: #FFF;
+    font-family: "Russo One";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.productDesc {
+    display: flex;
+    margin-top: 15px;
+    width: 420px;
+    padding: 10px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: #6B6563;
+    color: #FFF;
+    font-family: "Russo One";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.featuresButton {
+    font-family: "Russo One";
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background: #8D402C;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.featuresButton:hover {
+    background-color: #6D3B2D;
+}
+
+.popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    border-radius: 10px;
+    background: #1C1515;
+    box-shadow: 0px 4px 20px 0px rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 99;
+}
+
+.popupContent h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.popupContent p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.closeButton {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popupContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+@media (max-width: 768px) {
+    .columnscreen {
+      display: none; /* Скрываем на мобильных */
+    }
+  
+    .columnscreenmobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        padding: 25px; /* Добавьте отступ, если нужно */
+      }
+
+    .imageContainer {
+        position: relative;
+        background-color: transparent;
+        margin: 0;
+      }
+      
+      .imgRm {
+        width: 100%; /* Картинка на всю ширину */
+        height: auto; /* Сохраняем пропорции */
+        border-radius: 10px; /* Закругленные края, можно изменить радиус по желанию */
+      }
+      
+      .btnback {
+        position: absolute;
+        top: 10px; /* Отступ сверху */
+        left: 10px; /* Отступ слева */
+        z-index: 10; /* Чтобы кнопка была над изображением */
+        width: 50px;
+      }
+      
+      .imgRow {
+        display: flex; /* Для горизонтального размещения */
+        justify-content: center; /* Распределяем пространство между изображениями */
+        margin-top: 10px; /* Отступ сверху от изображения */
+        gap: 10px;
+        
+      }
+      
+      .imgctl {
+        width: 54px; /* Фиксированная ширина */
+        height: auto; /* Автоматическая высота для сохранения пропорций */
+        border-radius: 10px; /* Закругленные края, можно изменить радиус по желанию */
+        
+      }
+      
+
+      .roundedContainer {
+          border-radius: 10px;
+          background: rgba(255, 255, 255, 0.10);
+          backdrop-filter: blur(5px);
+        border-radius: 10px; /* Закругленные края */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+        width: 330px; /* Растягивается по ширине */
+        margin-bottom: 10px; /* Отступ между контейнерами */
+        padding: 20px; /* Внутренний отступ для содержимого */
+        gap: 10px;
+          color: #FFFFFF;
+      }
+      
+      .fixedContainer {
+        background-color: rgba(255, 255, 255, 0);
+        border-radius: 10px; /* Закругленные края */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+        width: 350px; /* Растягивается по ширине */
+        display: flex; /* Для кнопок */
+        justify-content: space-around; /* Разделение кнопок */
+        padding: 10px; /* Внутренний отступ */
+        margin-bottom: 10px;
+      }
+      
+      .button {
+        display: flex; /* Используем Flexbox */
+        flex-direction: column; /* Располагаем элементы в колонку */
+        align-items: center; /* Центрируем по горизонтали */
+        justify-content: center; /* Центрируем по вертикали */
+        width: 56px; /* Ширина кнопки */
+        height: 56px; /* Высота кнопки */
+        border: none;
+        border-radius: 10px; /* Убираем рамку */
+        cursor: pointer; /* Указатель мыши при наведении */
+          border-radius: 10px;
+          background: #8D402C;
+
+      }
+      
+      .image {
+          margin: auto 3%;
+      }
+      
+      .text {
+        font-size: 14px; /* Размер шрифта текста (при необходимости) */
+        text-align: center; /* Центрируем текст */
+        font-family: 'rubik';
+        color: #fff;
+      }
+      
+      .autoButton {
+        width: auto;
+        height: 56px; /* Высота кнопки */
+        color: white; /* Цвет текста на кнопке */
+        border: none; /* Убираем рамку */
+        border-radius: 10px; /* Закругленные края кнопки */
+        cursor: pointer; /* Указатель при наведении */
+        padding: 0 80px;
+        font-family: "rubik";
+          border-radius: 10px;
+          background: #8D402C;
+      }
+
+        .productDesc {
+            display: block;
+            width: auto;
+            color: #FFF;
+            font-family: "Russo One";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+
+      .productName {
+        font-size: 18px; /* Уменьшите размер шрифта для названия продукта */
+        font-family: 'Rubik', sans-serif; /* Устанавливаем шрифт Rubik */
+      }
+      
+      .currentPrice {
+        font-family: 'Panton', sans-serif; /* Устанавливаем шрифт Panton */
+      }
+      
+      .buttonContainer {
+        display: flex;
+          justify-content: center;/* Располагаем ссылки в одну строку */
+        gap: 10px; /* Отступ между ссылками */
+        margin-top: 10px;
+      }
+      
+      .btnM {
+        padding: 12px 12px;
+        margin: 5px;
+        border: none;
+        border-radius: 10px;
+        background-color: #cccccc;
+        color: #aaaaaa;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        font-family: 'panton';
+        font-size: 14px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        text-decoration: none;
+        text-align: center;
+      }
+
+
+
+      .productDescTitle {
+        font-size: 20px;
+        font-family: 'rubik';
+      }
+
+      .productDesc {
+        font-size: 16px;
+        font-family: 'rubik';
+      }
+
+      .orderButton {
+        border: none ;
+        border-radius: 20px;
+        cursor: pointer;
+        text-decoration: none;
+        background-color: #0088cc;
+        color: #ffffff;
+      }
+      
+      .orderButton:hover {
+          background-color: #0077bb;
+          text-decoration: none;
+          color: #ddd;
+      }
+  }
+  

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url>
+    <loc>https:/metrallo.by/blog</loc>
+  </url>
+  <url>
+    <loc>https:/metrallo.by/blog/article</loc>
+  </url>
+  <url>
+    <loc>https:/metrallo.by/catalog</loc>
+  </url>
+  <url>
+    <loc>https:/metrallo.by/contacts</loc>
+  </url>
+  <url>
+    <loc>https:/metrallo.by/payment</loc>
+  </url>
+  <url>
+    <loc>https:/metrallo.by/persongift</loc>
+  </url>
+</urlset>

@@ -1,0 +1,22 @@
+.popupcontent {
+  display: flex;
+}
+
+.popupimage {
+  flex: 1; /* Картинка займет всю левую часть */
+  background: url('/path/to/your/image.jpg') no-repeat center center;
+  background-size: cover; /* Картинка растянется на весь доступный блок */
+}
+
+.popuptext {
+  flex: 2; /* Текст займет две трети оставшегося пространства */
+  padding: 20px; /* Отступы вокруг текста */
+}
+
+/* Стили для кнопки "ОК" */
+.popup button {
+  position: absolute;
+  bottom: 20px; /* Отступ снизу */
+  left: 20px; /* Отступ слева */
+  font-family: 'panton';
+}

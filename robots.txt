@@ -1,0 +1,29 @@
+# Восстановление стандартного для 1С-Битрикс файла robots.txt
+User-agent: *
+Disallow: /bitrix/
+Disallow: /upload/
+Disallow: /admin/
+Disallow: /search/
+Disallow: /index.js?*
+Disallow: /404.js  # Запрет индексации 404 страницы
+
+# Разрешение индексации указанных папок
+Allow: /blog/
+Allow: /catalog/
+Allow: /contacts/
+Allow: /payments/
+Allow: /persongift/
+Allow: /page
+
+# Запрет индексации дублей страниц сайта
+Disallow: /*?*
+
+# Запрет индексации административного раздела
+Disallow: /bitrix/admin/
+
+# Запрет индексации результатов поиска по сайту
+Disallow: /search/
+
+# Запрет индексации сортировки каталогов
+Disallow: /*sort=*
+Disallow: /*order=*

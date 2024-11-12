@@ -1,0 +1,31 @@
+{
+  "name": "metrallo",
+  "version": "0.2.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@react-google-maps/api": "^2.19.3",
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
+    "next": "^14.2.4",
+    "react": "^18.3.1",
+    "react-before-after-slider-component": "^1.1.8",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.52.0",
+    "react-modal": "^3.16.1",
+    "react-router-dom": "^6.25.1",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.1.14"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.9",
+    "@types/react": "18.3.3",
+    "typescript": "5.5.2"
+  }
+}

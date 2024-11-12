@@ -1,0 +1,205 @@
+/* Контейнер для слайдера */
+.sliderContainer {
+    margin-top: 50px;
+    text-align: left;
+    color: #fff;
+}
+
+/* Заголовок слайдера */
+.title {
+    font-family: 'panton';
+    font-size: 32px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+/* Обертка для слайдера */
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Скрываем слайды за пределами контейнера */
+}
+
+/* Обертка для всех слайдов */
+.slidesWrapper {
+    display: flex;
+    transition: transform 0.5s ease; /* Плавная анимация сдвига */
+}
+
+/* Стили для каждого слайда */
+.sliderItem {
+    margin: 0 100px; /* Промежуток между картинками */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6; /* Боковые слайды полупрозрачные по умолчанию */
+    transition: opacity 0.5s ease, width 0.5s ease, height 0.5s ease; /* Плавные изменения прозрачности и размеров */
+}
+
+/* Увеличение центрального слайда */
+.sliderItem.active {
+    opacity: 1; /* Центральный слайд полностью видим */
+    z-index: 1; /* Центральный слайд на переднем плане */
+}
+
+/* Уменьшение боковых слайдов */
+.sliderItem:not(.active) {
+    opacity: 0.6; /* Боковые слайды полупрозрачные */
+}
+
+/* Контейнер для изображения */
+.imageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: width 0.5s ease, height 0.5s ease; /* Плавная анимация изменения размера */
+}
+
+/* Стили для центральных и боковых изображений */
+.sliderItem.active .imageWrapper {
+    width: 350px; /* Центральное изображение */
+    height: 350px;
+}
+
+.sliderItem:not(.active) .imageWrapper {
+    width: 260px; /* Боковые изображения */
+    height: 260px;
+}
+
+/* Стили для изображений */
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Контейнер для стрелок (снизу) */
+.navigation {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin: 10px 0 20px 0; /* Отступ сверху для стрелок */
+}
+
+/* Стрелки управления */
+.prevArrow, .nextArrow , .def {
+    color: #fff;
+    font-size: 50px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin: 0 40px; /* Отступ между стрелками */
+}
+
+.prevArrow:hover, .nextArrow:hover , .def:hover {
+    color: #aaa;
+}
+
+/* Адаптив для мобильных устройств */
+
+@media (max-width: 1024px) {
+    .sliderItem {
+        margin: 0 50px; /* Уменьшаем промежуток между картинками */
+    }
+
+    .sliderItem.active .imageWrapper {
+        width: 300px; /* Уменьшаем центральное изображение */
+        height: 300px;
+    }
+
+    .sliderItem:not(.active) .imageWrapper {
+        width: 220px; /* Уменьшаем боковые изображения */
+        height: 220px;
+    }
+
+    .title {
+        font-size: 28px;
+        margin-left: 20px;
+    }
+
+    .prevArrow, .nextArrow {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sliderItem {
+        margin: 0 30px; /* Еще меньше промежуток между картинками */
+    }
+
+    .sliderItem.active .imageWrapper {
+        width: 280px; /* Уменьшаем центральное изображение */
+        height: 280px;
+    }
+
+    .sliderItem:not(.active) .imageWrapper {
+        width: 200px; /* Уменьшаем боковые изображения */
+        height: 200px;
+    }
+
+    .title {
+        font-size: 24px;
+        margin-left: 15px;
+    }
+
+    .prevArrow, .nextArrow {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sliderItem {
+        margin: 0 20px; /* Еще уменьшаем промежуток между картинками */
+    }
+
+    .sliderItem.active .imageWrapper {
+        width: 250px; /* Центральное изображение для маленьких экранов */
+        height: 250px;
+    }
+
+    .sliderItem:not(.active) .imageWrapper {
+        width: 180px; /* Боковые изображения для маленьких экранов */
+        height: 180px;
+    }
+
+    .title {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .prevArrow, .nextArrow {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 320px) {
+    .sliderItem {
+        margin: 0 10px; /* Минимум пространства между картинками */
+    }
+
+    .sliderItem.active .imageWrapper {
+        width: 230px; /* Центральное изображение для самых маленьких экранов */
+        height: 230px;
+    }
+
+    .sliderItem:not(.active) .imageWrapper {
+        width: 170px; /* Боковые изображения для самых маленьких экранов */
+        height: 170px;
+    }
+
+    .title {
+        font-size: 18px;
+        margin-left: 5px;
+    }
+
+    .prevArrow, .nextArrow {
+        font-size: 25px;
+    }
+}

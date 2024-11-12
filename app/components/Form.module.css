@@ -1,0 +1,164 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('/image/3-zerk.jpg') lightgray 50% / cover no-repeat;
+    padding: 20px; /* Добавляем внутренние отступы для предотвращения прилипания к краям */
+}
+
+  .centeredContent h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+      font-family: 'Russo One', serif;
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+      padding-top: 20px;
+
+  }
+
+.centeredContent {
+    margin-top: 40px;
+    width: 35%;
+    margin-left: 60%;
+    margin-right: auto;
+    margin-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background: #1E1B19;
+    padding: 20px; /* Внутренние отступы для содержимого */
+}
+
+.formControl, .formControlTa {
+    background-color: #C8BCB8;
+    color: #6A5A5A;
+    border: none;
+    border-radius: 30px;
+    width: 100%; /* Делаем элементы формы занимать всю ширину контейнера */
+    max-width: 400px; /* Максимальная ширина для более крупных экранов */
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    font-family: 'Russo One';
+}
+
+.formControlTa {
+    height: 100px;
+    padding-top: 20px;
+    overflow-y: auto;
+}
+
+
+  .alert {
+    color: #ffffff;
+      border-radius: 15px;
+      background: #6B6563;
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Russo One';
+    display: flex;
+    margin-top: 15px;
+
+  }
+
+  .buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+ .formGroupNone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+ }
+
+ .buttonPayment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+     border: none;
+     padding: 10px 20px;
+     border-radius: 15px;
+     background: #8D402C;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 900;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    font-family: 'Russo One';
+    }
+
+    .buttonPayment:hover {
+        transition: background-color 0.3s ease, border-radius 0.3s ease;
+        background: #6D3B2D;
+        font-family: 'Russo One';
+        text-decoration: none;
+        color: #ddd;
+    }
+
+  .agreement {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    padding: 20px 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Russo One';
+    }
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .centeredContent {
+        width: 80%;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .formControl, .formControlTa {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .buttonPayment {
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .centeredContent h1 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 650px) {
+    .container {
+        background: none;
+    }
+
+    .centeredContent {
+        width: 80%;
+        margin: 5% auto;
+    }
+}

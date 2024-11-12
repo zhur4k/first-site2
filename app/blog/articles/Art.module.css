@@ -1,0 +1,156 @@
+@font-face {
+  font-family: 'panton';
+  src: url('/fonts/Panton.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'rubik';
+  src: url('/fonts/RUBIK.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.blogContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0px;
+  font-family: 'rubik ', sans-serif;
+}
+
+.blogHeader {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-color: #333;
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.blogArticle {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin-top: 5%;
+  margin-bottom: 3%;
+  color: #FFFFFF;
+}
+
+.blogContent {
+  padding: 40px;
+}
+
+.cmsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.blogHeaderInfo a {
+  font-family: 'rubik';
+  font-size: 20px;
+  font-weight: 900;
+  
+}
+
+.blogHeaderTitle {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: 'panton';
+}
+
+.blogHeaderDate {
+  display: block;
+  text-align: right;
+  width: 100%;
+  font-family: 'rubik';
+  font-size: 16px;
+  color: #A7A7A7;
+  margin-bottom: 10px;
+
+}
+
+
+.blogHeaderAuthor {
+  font-size: 25px;
+  color: #F8DA7F;
+  margin-top: 5px;
+  font-family: 'panton';
+}
+
+.cmsSection {
+  font-family: 'rubik';
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.cmsSection p {
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.cmsSection ul {
+  list-style: inside square;
+  margin: 20px 0;
+  
+}
+
+.cmsSection ul li {
+  margin-bottom: 10px;
+}
+
+.prevLinkWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.prevLinkWrap a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.prevLinkWrap img {
+  filter: invert(50%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.prevLinkWrap img:hover {
+  transform: scale(1.1);
+  filter: invert(100%);
+}
+
+/* Добавьте медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+
+  .blogContainer{
+    margin: 20% auto;
+  }
+  .blogHeader {
+    height: 200px;
+  }
+
+  .blogArticle {
+    margin-top: -50px;
+  }
+
+  .blogContent {
+    padding: 20px;
+  }
+}

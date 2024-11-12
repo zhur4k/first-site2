@@ -1,0 +1,477 @@
+.popup {
+  position: fixed;
+  top: 10%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* полупрозрачный фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Russo One';
+}
+
+.divG {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.divH {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+ 
+.divH p {
+  margin-bottom: 20px;
+  color: #ffffff70;
+}
+
+.divG h1 {
+  color: #fff;
+  font-size: 25px;
+  font-family: 'panton';
+  margin: 20px;
+  text-align: start;
+}
+
+.divider {
+  border: 2px solid #ffffff70;
+  width: 100%;
+  margin: 10px;
+}
+
+.plash {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  font-size: 20px;
+  color: #fff;
+  font-family: 'rubik';
+  text-align: start;
+  /*border: 3px solid #fff;*/
+  border-radius: 20px;
+}
+
+.plash2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 20px;
+  color: #fff;
+  font-family: 'rubik';
+  text-align: start;
+  /*border: 3px solid #fff;*/
+  border-radius: 20px;
+}
+
+.popupcontent {
+  display: flex;
+  width: 900px;
+  height: 560px;
+  background: rgba(255, 255, 255, 0.20);
+  backdrop-filter: blur(15px);
+  justify-content: space-between;
+  border-radius: 20px;
+  font-family: 'Russo One';
+}
+
+.popupcontent1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  width: 900px;
+  height: 560px;
+  background: rgba(255, 255, 255, 0.20);
+  backdrop-filter: blur(15px);
+  justify-content: space-between;
+  border-radius: none;
+  font-family: 'rubik';
+  text-align: center;
+}
+
+.popupcontent2 {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.20);
+  backdrop-filter: blur(15px);
+  width: 900px;
+  height: 600px;
+  font-family: 'Russo One';
+  text-align: center;
+}
+
+.inputCont {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr); /* Три столбца равной ширины */
+  gap: 10px;
+  width: 900px;
+  height: 560px;
+  font-family: 'Russo One';
+  text-align: center;
+}
+
+
+.progressBar {
+  height: 20px; /* Высота прогресс бара */
+  background-color: #8D402C;
+  position: absolute; /* Оставляем позицию как абсолютную */
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s; /* Плавное изменение ширины */
+  overflow: hidden; /* Скрыть все, что выходит за пределы */
+  border-radius: 10px;
+}
+
+.progressBar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* Градиентный бегущий блик */
+  animation: shimmer 2s infinite; /* Анимация переливания */
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.popuptext {
+  flex: 1;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 50px;
+}
+
+.popuptext h2 {
+  color: #fff;
+  font-family: 'panton';
+  font-size: 29px;
+}
+
+.popuptext p {
+  color: #fff;
+  font-family: 'rubik';
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.popuptext h3 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 260px;
+  height: 30px;
+  color: #ffffff;
+  font-family: 'panton';
+  font-size: 20px;
+}
+
+.popupimage img {
+  border: none;
+  display: block;
+  margin: -70px auto 0 -40px; /* Устанавливаем отступы по горизонтали для центрирования и отрицательный отступ сверху */
+  width: 700px; /* Устанавливаем ширину изображения */
+  height: 700px; /* Устанавливаем высоту изображения */
+}
+
+.popupnomber {
+  font-size: 20px; /* Скрыть номер на больших экранах */
+  font-family: 'rubik';
+  font-weight: 900;
+  color: #eee;
+  transition: background-color 0.3s, transform 0.3s; /* Добавляем плавность перехода */
+}
+
+.popupnomber:hover {
+  text-decoration: none;
+  transform: scale(1.03); /* Увеличиваем кнопку при наведении */
+  color: #ffffff;
+}
+
+.popupimage {
+  width: 520px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 100px; /* Отступ сверху */
+  right: 150px; /* Отступ справа */
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #aaa;
+}
+
+.buttonA {
+    background-color: #ffffff00;
+    border: 3px solid #ffffff ;
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;
+    transition: background-color 0.3s, transform 0.3s; /* Добавляем плавность перехода */
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'rubik';
+  }
+  
+.buttonA:hover {
+    background-color: #ffffff77;
+    text-decoration: none;
+    transform: scale(1.03); /* Увеличиваем кнопку при наведении */
+    color: #ffffff;
+  }
+
+  .rotatingImage {
+    position: relative;
+  }
+  
+  .rotating {
+    animation: rotate 2s linear infinite;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    25% {
+      transform: rotate(10deg) scale(1.1);
+    }
+    50% {
+      transform: rotate(20deg) scale(1.2);
+    }
+    75% {
+      transform: rotate(10deg) scale(1.1);
+    }
+    100% {
+      transform: rotate(0deg) scale(1); 
+    }
+  }
+  
+  
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .imageButton {
+    margin: 0 10px;
+    padding: 0;
+    background: none;
+    border: none;
+  }
+  
+  .imageButton img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .buttonB {
+    background-color: #ffffff00;
+    border: 3px solid #ffffff ;
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;
+    transition: background-color 0.3s, transform 0.3s; /* Добавляем плавность перехода */
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'rubik';
+    margin: 10px;
+  }
+  
+.buttonB:hover {
+    background-color: #ffffff77;
+    text-decoration: none;
+    transform: scale(1.03); /* Увеличиваем кнопку при наведении */
+  }
+
+.buttonB {
+    background-color: #ffffff00;
+    border: 3px solid #ffffff ;
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;
+    transition: background-color 0.3s, transform 0.3s; /* Добавляем плавность перехода */
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'rubik';
+    margin: 10px;
+  }
+  
+.buttonB:hover {
+    background-color: #ffffff77;
+    text-decoration: none;
+    transform: scale(1.03); /* Увеличиваем кнопку при наведении */
+  }
+
+  .buttonC {
+    background-color: #ffffff00;
+    border: 3px solid #ffffff ;
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;
+    transition: background-color 0.3s, transform 0.3s; /* Добавляем плавность перехода */
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'rubik';
+    margin: 10px;
+    width: 90%;
+  }
+  
+.buttonC:hover {
+    background-color: #ffffff77;
+    text-decoration: none;
+    transform: scale(1.03); /* Увеличиваем кнопку при наведении */
+    color: #0088cc;
+  }
+
+/* Стили для кнопки */
+.button_name1 {
+  background-color: #ffffff00; /* Зеленый цвет фона */
+  border: 2px solid #ff0000;
+  color: white; /* Белый цвет текста */
+  padding: 20px 20px; /* Внутренние отступы */
+  text-align: center; /* Выравнивание текста по центру */
+  text-decoration: none; /* Убираем подчеркивание ссылки */
+  display: inline-block;
+  font-size: 16px; /* Размер шрифта */
+  cursor: pointer; /* Изменение формы курсора при наведении */
+  border-radius: 5px; /* Скругление углов */
+}
+
+.button_name1:hover {
+  background-color: #45a049; /* Цвет фона при наведении */
+}
+
+.productImage {
+  display: block;
+  transition: transform 0.3s ease; /* Плавное изменение при наведении */
+}
+
+.checkboxInput {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-left: 20px;
+  border-radius: 50%;
+}
+
+.chlabel {
+  font-size: 25px;
+  color: #ffffff;
+  font-family: 'panton';
+}
+
+.alert {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid #c3e6cb;
+  border-radius: 5px;
+  text-align: center;
+  width: 90%;
+}
+
+.saleStyle {
+  color: #FFE49B;
+  font-family: 'panton';
+  text-align: start;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.formControl {
+  background-color: rgb(223, 226, 231);
+  color: #393939;
+  border: none;
+  border-radius: 30px;
+  width: 350px;
+  height: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+      
+  margin-bottom: 15px;
+
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  font-family: 'rubik';
+  }
+
+  .formGrid {
+    display: grid;
+    grid-template-rows: auto auto; /* Две строки с автоматической высотой */
+    grid-template-columns: auto auto; /* Два столбца с автоматической шириной */
+    gap: 10px; /* Расстояние между элементами */
+}
+
+.formGroupNone {
+  grid-row: span 1; /* Занимает одну строку */
+  grid-column: span 1; /* Занимает один столбец */
+}
+
+.text {
+  font-family: "panton";
+  color: #ffffff;
+  font-size: 15px;
+  
+}
+
+.result {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.result h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.result p {
+  color: #666;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+
+  .popup {
+    display: none;
+  }
+}

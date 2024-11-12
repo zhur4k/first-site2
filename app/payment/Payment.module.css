@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap');
+
+@font-face {
+  font-display: swap;
+  font-family: 'Russo One';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Russo.woff2') format('woff2');
+}
+
+.kelly-slab-regular {
+  font-family: "Kelly Slab", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+.paymentContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    text-decoration: none;
+    font-family: "Russo One";
+  }
+
+  .left {
+    display: grid;
+    grid-template-columns: 1fr; /* Создает одну колонку */
+    align-items: start; /* Выравнивание элементов в начале колонки */
+    justify-content: start; /* Выравнивание элементов в начале строки */
+    /*background-color: crimson;*/
+    padding: 10px; /* Добавляет отступ внутри контейнера */
+    gap: 20px;
+  }
+
+  .left_text{
+    display: flex;
+    width: 480px;
+    height: 300px;
+    padding: 20px 25px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(5px);
+    font-family: "Russo One";
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .left h2 {
+    color: #FFE49B;
+    font-family: "Russo One";
+    font-size: 28px;
+  }
+  .left h1 {
+    color: #FFF;
+    font-family: "Russo One";
+    font-size: 38px;
+  }
+  .left p {
+    color: #FFF;
+    text-align: center;
+    font-family: "Russo One";
+    font-size: 22px;
+  }
+
+  .divCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    padding-top: 10px;
+  }
+
+  .divGrid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-color: #ffffff; /* Фон кнопки */
+    color: #000000; /* Цвет текста */
+    font-size: 20px; /* Размер шрифта */
+    border: none; /* Без рамки */
+    border-radius: 20px; /* Без скругления углов */
+    padding: 20px; /* Отступ справа */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Тень кнопки */
+    cursor: pointer; /* Курсор в виде указателя */
+    white-space: normal;
+    margin-bottom: 10px;
+  }
+
+
+  .raw {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 5%;
+
+  }
+
+.column {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4%;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.infoContainer {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  gap: 20px;
+  transition: background 0.3s, border-radius 0.3s;
+}
+
+.infoContainer:hover {
+  background: rgba(236, 160, 160, 0.2);
+  border-radius: 30px;
+}
+
+.number {
+  margin-right: 20px;
+  margin-left: 20px;
+  color: #FFF;
+  text-align: center;
+  font-family: "Kelly Slab";
+  font-size: 50px;
+}
+
+.text {
+  color: #FFF;
+  font-family: "Russo One";
+  font-size: 19px;
+  line-height: 1.2;
+}
+
+.popupContainer {
+  margin-top: 50px;
+  width: 100vw;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn, .dropbtn2, .dropbtn3 {
+  position: relative;
+  width: 350px;
+  height: 300px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(5px);
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Задний квадрат с лёгким смещением */
+.dropdown::before {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(5px);
+  z-index: 1; /* Под передним квадратом */
+}
+
+/* Текст и изображение */
+.dropbtn::before {
+  content: 'Оформление оптового заказа';
+  position: absolute;
+  top: 20px;
+  font-size: 23px;
+  font-family: "Russo One";
+  font-weight: bold;
+  color: #ffffff;
+  z-index: 3;
+}
+
+.dropbtn::after {
+  content: '';
+  position: absolute;
+  bottom: 60px;
+  width: 150px;
+  height: 150px;
+  background: url('/payment/opt-zak-blk.svg') no-repeat center;
+  background-size: contain;
+  z-index: 3;
+}
+
+.dropdown:hover .dropbtn {
+  color: #fff;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.40);
+  backdrop-filter: blur(5px);
+}
+
+.dropdown:hover .dropbtn2 {
+  color: #fff;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.40);
+  backdrop-filter: blur(5px);
+}
+
+.dropdown:hover .dropbtn3 {
+  color: #fff;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.40);
+  backdrop-filter: blur(5px);
+}
+
+.dropbtn2::before {
+  content: 'Оплата корпоративных подарков';
+  position: absolute;
+  top: 20px;
+  font-size: 23px;
+  font-family: "Russo One";
+  font-weight: bold;
+  color: #ffffff;
+  z-index: 3;
+}
+.dropbtn2::after {
+  content: '';
+  position: absolute;
+  bottom: 60px;
+  width: 150px;
+  height: 150px;
+  background: url('/payment/koop-pic-blk.svg') no-repeat center;
+  background-size: contain;
+  z-index: 3;
+
+}
+
+.dropbtn3::before {
+  content: 'Минимальный заказ и доставка';
+  position: absolute;
+  top: 20px;
+  font-size: 23px;
+  font-family: "Russo One";
+  font-weight: bold;
+  color: #ffffff;
+  z-index: 3;
+}
+.dropbtn3::after {
+  content: '';
+  position: absolute;
+  bottom: 60px;
+  width: 150px;
+  height: 150px;
+  background: url('/payment/minzak-pic-blk.svg') no-repeat center;
+  background-size: contain;
+  z-index: 3;
+}
+
+
+.popupoverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup {
+  border-radius: 30px;
+  background: #382C29;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 350px;
+  color: #FFFFFF;
+  font-family: "Russo One";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popupheader {
+  font-family: "Russo One";
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.popupcontent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.popupimage {
+  padding-top: 4%;
+  flex-shrink: 0;
+  padding-left: 2%;
+}
+
+.popuptext {
+  text-align: right;
+  font-family: "Russo One";
+  font-size: 15px;
+  flex-grow: 1;
+
+  line-height: 1.3;
+}
+
+.popup button {
+  border-radius: 30px;
+  background-color: #FFFFFF;
+  color: #000;
+  border: none;
+  width:25%;
+  font-family: "Russo One";
+  font-weight: bold;
+  padding: 6px 0px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  align-self: center;
+}
+
+.popup button:hover {
+  background: rgba(236, 160, 160, 0.20);
+}
+
+
+
+
+@media (max-width: 1120px) {
+  .paymentContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dropdown, .dropbtn, .dropbtn2, .dropbtn3 {
+    font-size: 16px;
+  }
+
+  .infoContainer {
+
+  }
+}
+
+@media (max-width: 1024px) {
+  .paymentContainer {
+    padding: 10px;
+  }
+
+  .left, .column {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .infoContainer {
+  }
+}
+
+@media (max-width: 768px) {
+  .paymentContainer {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .left, .column, .infoContainer {
+    padding: 0 10px;
+  }
+
+  .dropdown, .dropbtn, .dropbtn2, .dropbtn3 {
+    width: 95%;
+    font-size: 16px;
+    margin: 10px;
+  }
+
+  .popupContainer {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .popup {
+    width: 80%;
+    padding: 20px;
+    height: auto;
+  }
+
+  .popupcontent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .popupimage {
+    margin: 0 auto;
+  }
+
+  .left_text {
+    width: auto;
+    height: auto;
+    padding: 15px;
+    font-size: 18px;
+  }
+
+  .infoContainer {
+    width: 95% ;
+    padding: 10px;
+  }
+
+  .number {
+    font-size: 32px;
+    margin: 0;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+}
+

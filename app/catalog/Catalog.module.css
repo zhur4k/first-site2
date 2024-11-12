@@ -1,0 +1,734 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .dropbtn {
+    background-color: #ffffff;
+    color: #000000; /* Цвет текста */
+    font-size: 16px; /* Размер шрифта */
+    border: none; /* Без рамки */
+    width: 250px;
+    border-radius: 20px; /* Без скругления углов */
+    padding: 20px; /* Отступ справа */
+    font-family: 'rubik';
+    cursor: pointer; /* Курсор в виде указателя */
+    white-space: normal;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  
+  .dropdown:hover .dropbtn {
+    background-color: rgba(0, 136, 204, 0.1);
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+  }
+  
+  .alldropdown a {
+    padding: 10px 20px;
+    margin: 5px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+
+    background-color: #eee;
+    color: #333;
+
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family: 'rubik';
+    font-size: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+  }
+
+  .alldropdown a:hover {
+    background-color: #334b57;
+    color: #ffffff;
+    border: none;
+  }
+
+ .alldropdown {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    padding: 10px;
+    overflow-y: auto;
+    gap: 10px;
+    border-radius: 10px;
+ }
+
+  .divCenter {
+    display: none; /* flex */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    padding-top: 10px;
+  }
+
+  .divUpStart {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background-color: rgba(127, 255, 212, 0);
+    width: 100%;
+  }
+
+  .divGridFilter {
+    display: none;
+    grid-template-columns: 1fr; /* Один столбец */
+    grid-gap: 10px; /* Расстояние между элементами */
+    justify-items: start; /* Выравнивание по горизонтали влево */
+    align-items: start;
+    background-color: #ffffff; /* Фон кнопки */
+    color: #000000; /* Цвет текста */
+    font-size: 20px; /* Размер шрифта */
+    border: none; /* Без рамки */
+    border-radius: 20px; /* Без скругления углов */
+    padding: 20px; /* Отступ справа */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Тень кнопки */
+    font-family: 'rubik';
+    cursor: pointer; /* Курсор в виде указателя */
+    white-space: normal;
+    margin: 10px 50px;
+  }
+
+  .divGridFilter hr {
+    background-color: #007bff;
+  }
+
+  .divGrid {
+    display: grid;
+    justify-content: start;
+    align-content: center;
+    /*background-color: #ffffff;  Фон кнопки */
+    color: #000000; /* Цвет текста */
+    font-size: 20px; /* Размер шрифта */
+    border: none; /* Без рамки */
+    border-radius: 20px; /* Без скругления углов */
+    padding: 20px; /* Отступ справа */
+    /*box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Тень кнопки */
+    font-family: 'rubik';
+    cursor: pointer; /* Курсор в виде указателя */
+    white-space: normal;
+    margin: 10px 270px;
+  }
+
+ .divGrid h1 {
+   align-items: center;
+   /*font-family: 'panton';*/
+ }
+
+ .filterTitle {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  margin-top: 30px; /* Отступ сверху для названия */
+  font-size: 30px;
+  font-weight: 800;
+  font-family: 'rubik';
+  color: #333;
+  text-align: left;
+  margin-left: 50px;
+  margin-bottom: 35px;
+ }
+
+ .divItems {
+  padding-top: 5px;
+  margin: 0px 200px;
+  align-items: center ;
+  justify-content: center;
+  background-color: rgba(0, 255, 255, 0);
+}
+
+ .divProduct {
+  grid-template-rows: repeat(3, 370px); /* 3 строки */
+   display: grid;
+   grid-template-columns: repeat(4, 270px); /* 4 columns */
+   grid-row-gap: 20px;
+   grid-column-gap: 50px;
+   justify-content: center;
+   color: #fff;
+   font-family: 'rubik';
+}
+
+ .productCard {
+
+   height: 300px;
+   border-radius: 20px;
+   background-color: #333;
+   color: #fff;
+   text-align: center;
+   padding: 20px;
+   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+  
+}
+
+.productImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.productImage,
+.productImageHover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.productImageHover {
+  opacity: 0; /* Начальная непрозрачность для hover-изображения */
+}
+
+.productImageWrapper:hover .productImageHover {
+  opacity: 1; /* Показать hover-изображение при наведении */
+}
+
+.productImageWrapper:hover .productImage {
+  opacity: 0; /* Скрыть основное изображение при наведении */
+}
+
+
+.productCard:hover .productImageHover {
+  opacity: 1; /* При наведении изображение становится непрозрачным */
+}
+
+.productName {
+  text-align: center;
+  font-family: "Russo One";
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  margin: 20px 0 10px;
+}
+
+.productId {
+  margin-top: 20px; /* Отступ сверху для названия */
+  font-size: 16px;
+}
+
+.productPrice {
+  text-align: center;
+  font-family: "Russo One";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #ddd;
+}
+
+
+.productContainer {
+  background-color: rgba(0, 255, 255, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 200px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Тень кнопки */
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 20px;
+}
+
+.descriptionContainer {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.closeButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.pagination button {
+
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  font-family: 'rubik';
+  border-radius: 15px;
+  background: #6B6563;
+
+}
+
+.pagination button:hover {
+
+  background: #6D3B2D;
+  color: white;
+ 
+}
+
+.pagination button.active {
+  border-radius: 15px;
+  background: #8D402C;
+ 
+}
+
+
+.paymentContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  flex-direction: column;
+  padding: 100px 20px;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  margin-right: 50px;
+}
+
+.right h2 {
+  font-size: 21px;
+  font-family: 'rubik';
+  color: #0088cc;
+  margin: 20px 0;
+}
+.right h1 {
+  font-size: 38px;
+  font-family: 'panton';
+  color: #000000;
+  margin: 20px 0;
+}
+.right p {
+  white-space: pre-wrap;
+  font-size: 20px;
+  font-family: 'rubik';
+  color: #000000;
+  margin: 20px 0;
+}
+
+.btnPay {
+  background-color: #0088cc;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+  padding: 20px 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 25px;
+  margin-top: 30px;
+  
+  cursor: pointer;
+}
+
+.btnPay:hover {
+  background-color: #0077bb;
+  text-decoration: none;
+  color: #ddd;
+}
+
+.burgerTab {
+  display: none; /* Скрыть бургер-вкладку по умолчанию */
+  border: none;
+  color: black;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.burgerDropdown {
+  display: none;
+  position: fixed;
+  top: 0px; /* Расположение меню под кнопкой бургер-вкладкой */
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1000;
+  max-height: 900px; /* Установите максимальную высоту меню */
+  overflow-y: auto; /* Добавьте вертикальную прокрутку при необходимости */
+}
+
+.burgerDropdown a {
+  font-size: 18px;
+  color: #fff;
+  
+}
+
+.p {
+  text-align: center;
+  margin: 10px 15px ;
+  gap: 10px;
+}
+
+.checkboxios {
+  display: inline-block;    
+  height: 28px;    
+  line-height: 28px;  
+  margin-right: 10px;      
+  position: relative;
+  vertical-align: middle;
+  font-size: 14px;
+  user-select: none;  
+}
+
+.checkboxios .checkboxiosswitch {
+  position: relative;  
+  display: inline-block;
+  box-sizing: border-box;      
+  width: 56px;  
+  height: 28px;
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-radius: 25%/50%;  
+  vertical-align: top;
+  background: #eee;
+  transition: .2s;
+}
+
+.checkboxios .checkboxiosswitch:before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 1px;  
+  display: inline-block;
+  width: 24px;  
+  height: 24px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+  transition: .15s;
+}
+
+.checkboxios input[type=checkbox] {
+  display: block;  
+  width: 0;
+  height: 0;  
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.checkboxios input[type=checkbox]:not(:disabled):active + .checkboxiosswitch:before {
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, .3);
+}
+
+.checkboxios input[type=checkbox]:checked + .checkboxiosswitch {
+  background: #0088cc;
+}
+
+.checkboxios input[type=checkbox]:checked + .checkboxiosswitch:before {
+  transform: translateX(28px);
+}
+
+.filterButton {
+  display: none;
+}
+
+.burgerMenu {
+  font-family: "rubik";
+}
+
+
+@media (max-width: 759px) {
+  .filterButton {
+    background: #0088cc;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px 20px;
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 20px;
+    font-family: 'rubik';
+    border: none;
+  }
+
+  .divGridFilter {
+    display: none;
+  }
+  
+  .p {
+    color: #fff;
+  }
+
+  .burgerMenu {
+    display: grid;
+    grid-template-columns: 1fr; /* Один столбец */
+    justify-items: start; /* Выравнивание по горизонтали влево */
+    align-items: start;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    background: #333;
+    z-index: 9999;
+    padding: 20px;
+    border-radius: 20px;
+    overflow-y: auto;
+  }
+
+  .fon50 {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.5); /* Черный фон с прозрачностью 50% */
+}
+
+  .burgerMenu h2 {
+    color: #fff;
+  }
+  
+  .applyButton {
+    background: #0088cc;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 20px;
+    font-family: 'rubik';
+    border: none;
+    margin-left: 10px;
+  }
+
+
+  .divGrid {
+    margin: 10px;
+    display: none;
+  }
+
+  .divCenter {
+    
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 столбика */
+    grid-template-rows: repeat(3, auto); /* 3 строки */
+    
+  }
+
+
+  .dropdown button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .alldropdown {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 столбика */
+    grid-template-rows: repeat(3, auto); /* 3 строки */
+    gap: 5px;
+  }
+
+  .alldropdown a {
+    padding: 5px;
+    font-size: 12px; /* Уменьшение шрифта */
+  }
+
+  .alldropdown img {
+    width: 30px; /* Уменьшение размера изображения */
+    height: 30px;
+  }
+
+  .paymentContainer {
+    padding: 10px;
+  }
+
+  .paymentContainer .left img {
+    width: 100%;
+    height: auto;
+  }
+
+  .paymentContainer .right h2 {
+    font-size: 24px;
+  }
+
+  .paymentContainer .right h1 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .paymentContainer .right p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .paymentContainer .right .btnPay {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .burgerItem {
+    color: #fff;
+   }
+
+  .btnProf {
+    display: none;
+  }
+
+  .burgerTab {
+    display: block; /* Показать бургер-вкладку на мобильных устройствах */
+  }
+
+  .burgerDropdown {
+    display: block;
+  }
+
+  .burgerDropdown a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    display: flex;
+    align-items: center;
+  }
+
+  .burgerDropdown a img {
+    margin-right: 10px
+  }
+
+  .burgerDropdown a:hover {
+    background-color: #222;
+  }
+
+  .divUpStart {
+    padding: 0px; /* Добавим отступы для контейнера с продуктами */
+  
+  }
+  
+  .divProduct {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Два столбца с равным размером */
+    grid-template-rows: auto; /* Автоматическая высота строк */
+    grid-column-gap: 1px;
+  }
+
+  .productImageWrapper {
+    width: 100%; /* Занять всю ширину экрана на мобильных устройствах */
+    height: 60%; /* Высота будет зависеть от ширины и пропорций изображения */
+    aspect-ratio: 1; /* Сохраняем квадратную форму */
+  }
+
+  .productImage {
+    border-radius: 10px 10px 0 0; /* Скругление верхних углов */
+  }
+
+  .productImageHover {
+    border-radius: 10px 10px 0 0; /* Скругление верхних углов */
+  }
+
+  .productName {
+    font-size: 15px; /* Уменьшенный размер шрифта названия продукта */
+    margin-top: 20px; /* Уменьшенный отступ сверху для названия */
+    color: #0088cc;
+  }
+
+  .productId {
+    font-size: 14px; /* Уменьшенный размер шрифта артикула */
+    margin-top: 10px; /* Уменьшенный отступ сверху для артикула */
+  }
+
+  .productPrice {
+    font-size: 24px; /* Уменьшенный размер шрифта цены */
+    margin-top: 6px; /* Уменьшенный отступ сверху для цены */
+  }
+  burgerDropdown
+
+  .divItems {
+    padding-top: 5px;
+    margin: 0px 20px;
+    align-items: center ;
+    justify-content: center;
+    background-color: rgba(0, 255, 255, 0);
+  }
+
+  .filterTitle {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    margin-top: 30px; /* Отступ сверху для названия */
+    font-size: 16px;
+    font-weight: 800;
+    font-family: 'rubik';
+    color: #333;
+    text-align: left;
+    margin-left: 10px;
+   }
+
+  .productCard {
+    width: 75%;
+    margin: 10px auto;
+    height: 260px;
+  }
+}
+
+@media (min-width: 1200px) {
+  
+
+}

@@ -1,0 +1,28 @@
+.scrollToTopButton {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  padding: 10px;
+  border-radius: 50%;
+  background: #8D402C;
+  color: white;
+  border: none;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  outline: none;
+  z-index: 1001;
+  transition: transform 0.3s ease; /* Добавлено для плавности анимации */
+}
+
+.scrollToTopButton:hover {
+  background: #6D3B2D;
+  transform: translateY(-5px); /* Поднимает кнопку и содержимое вверх */
+}
+
+.scrollToTopButton img {
+  transition: transform 0.3s ease; /* Добавлено для плавности анимации */
+}
+
+.scrollToTopButton:hover img {
+  transform: translateY(-3px); /* Поднимает только изображение внутри кнопки */
+}

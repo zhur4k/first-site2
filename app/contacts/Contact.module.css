@@ -1,0 +1,135 @@
+.contactContainer {
+  padding: 20px;
+}
+
+.maintitle {
+  text-align: center;
+  padding-bottom: 20px;
+  color: #FFF;
+  font-family: "Russo One";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 520px);
+  grid-row-gap: 30px;
+  grid-column-gap: 50px;
+  justify-content: center;
+  color: #fff;
+  font-family: 'rubik';
+}
+
+.companyInfo, .individualInfo, .timework, .contactForm {
+  max-width: 550px;
+  padding: 40px 25px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(5px);
+}
+
+.title {
+  text-align: start;
+  padding-bottom: 10px;
+  color: #F8DA7F;
+  font-family: "Russo One";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.pText {
+  text-align: start;
+  color:  #FFF;
+  font-family: "Russo One";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.alert {
+  padding-top: 30px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .contactContainer {
+    padding: 10px;
+  }
+
+  .gridContainer {
+    grid-template-columns: 1fr;
+    grid-column-gap: 20px;
+  }
+
+  .maintitle {
+    font-size: 28px;
+  }
+
+  .title, .pText {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 320px) {
+  .contactContainer {
+    padding: 10px;
+  }
+
+  .maintitle {
+    font-size: 24px;
+  }
+
+  .formContainer input, .formContainer button {
+    width: 100%;
+  }
+}
+
+.formContainer input {
+  width: 95%;
+  height: 30px;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 30px;
+  background: #C8BCB8;
+  border: none;
+  outline: none;
+  transition: all 0.2s ease;
+  font-family: "Russo One";
+  font-size: 15px;
+}
+
+.formContainer input:focus {
+  outline: 2px solid #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.formContainer button {
+  font-family: "Russo One";
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  border: none;
+  height: 40px;
+  padding: 10px 20px;
+  margin-top: 5px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: #8D402C;
+  transition: 0.3s ease;
+}
+
+.formContainer button:hover {
+  background-color: #6D3B2D;
+  transform: scale(1.05);
+}
